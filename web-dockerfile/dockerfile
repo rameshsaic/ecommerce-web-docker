@@ -9,7 +9,7 @@ RUN sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
 
 
 # Install git and clone the repository
-RUN yum install -y git && git clone https://github.com/rameshsaic/ecommerce-web-docker.git/html/ /var/www/html/
+RUN yum install -y git && git clone https://github.com/rameshsaic/ecommerce-project.git /var/www/html/
 
 # Expose port 80 for Apache
 EXPOSE 80
