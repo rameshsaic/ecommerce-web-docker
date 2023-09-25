@@ -1,0 +1,19 @@
+# Use an official CentOS image as the base image
+FROM centos:7
+
+# Install Apache, PHP, and PHP MySQL extension
+RUN yum install -y httpd php php-mysql
+
+# Replace default index.html with index.php in Apache config
+RUN sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
+
+
+# Install git and clone the repository
+RUN yum install -y git && git clone https://github.com/rameshsaic/ecommerce-web-docker.git/html/ /var/www/html/
+
+# Expose port 80 for Apache
+EXPOSE 80
+
+# Command to start the Apache service in the foreground
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
