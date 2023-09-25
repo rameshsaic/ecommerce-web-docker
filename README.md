@@ -93,7 +93,7 @@ Clone the front-end project and build the Docker image:
 
 ```bash
 mkdir /tmp/ecommerce-project
-git clone https://github.com/rameshsaic/ecommerce-web-docker.git//tmp/ecommerce-project/
+git clone https://github.com/rameshsaic/ecommerce-web-docker.git/ /tmp/ecommerce-project/
 cd /tmp/ecommerce-project/web-dockerfile/ 
 chmod +x dockerfile
 docker build --no-cache -t front-end-ecommerce-image .
